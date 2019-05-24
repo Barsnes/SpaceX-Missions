@@ -35,10 +35,10 @@ class App extends React.Component {
 
   render() {
     if (!this.state.isLoaded) {
-        return <h1>Loading...</h1>;
-      } else {
+      return <h1>Loading...</h1>;
+    } else {
       const fullList = this.state.spaceData.map(i => (
-        <SpaceData data={i} id={i.flight_number} />
+        <SpaceData data={i} key={i.mission_name} />
       ));
       return (
         <div className="App">
